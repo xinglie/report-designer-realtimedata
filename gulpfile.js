@@ -238,6 +238,7 @@ gulp.task('dist', gulp.series('cleanSrc', () => {
             './src/designer/service.js',
             './src/designer/transform.js',
             './src/elements/**',
+            './src/gallery/mx-dialog/**',
             '!./src/elements/designer.js',
             '!./src/elements/**/designer.js',
             '!./src/elements/**/dshow.js',
