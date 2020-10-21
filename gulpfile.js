@@ -214,6 +214,20 @@ gulp.task('dist', gulp.series('cleanSrc', () => {
     combineTool.config({
         debug: false
     });
+    let time = new Date();
+    let stamp = [time.getFullYear(),
+    (time.getMonth() + 1 + '').padStart(2, '0'),
+    (time.getDate() + '').padStart(2, '0'),
+    (time.getHours() + '').padStart(2, '0'),
+    (time.getMinutes() + '').padStart(2, '0')].join('');
+    let content = fs.readFileSync('./index.html').toString();
+    content = content.replace(/src="dist\/iot.js(\?v=\d+)?"/, `src="dist/iot.js?v=${stamp}"`);
+    fs.writeFileSync('./index.html', content);
+
+    content = fs.readFileSync('./print.html').toString();
+    content = content.replace(/src="dist\/printer.js(\?v=\d+)?"/, `src="dist/printer.js?v=${stamp}"`);
+    fs.writeFileSync('./print.html', content);
+
     return del('./dist').then(() => {
         return combineTool.combine();
     }).then(() => {
