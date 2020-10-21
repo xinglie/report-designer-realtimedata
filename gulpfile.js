@@ -238,7 +238,6 @@ gulp.task('dist', gulp.series('cleanSrc', () => {
             './src/util/**',
             './src/panels/**',
             './src/elements/**',
-            '!./src/elements/**/printer.js',
             './src/designer/**'])
             .pipe(concat('iot.js'))
             .pipe(terser({
