@@ -4,8 +4,8 @@
             "title": "人物信息",
             "stage": {
                 "page": {
-                    "width": 793,
-                    "height": 1122,
+                    "width": 791,
+                    "height": 1120,
                     "background": "#ffffff",
                     "backgroundImage": "",
                     "backgroundRepeat": "full",
@@ -18,7 +18,7 @@
                 "elements": [
                     {
                         "id": "e_125",
-                        "type": "table",
+                        "type": "hod-table",
                         "props": {
                             "rows": [
                                 {

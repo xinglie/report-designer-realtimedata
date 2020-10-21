@@ -9,7 +9,13 @@ let fs = require('fs');
 let ts = require('typescript');
 let concat = require('gulp-concat');
 let combineTool = require('../magix-composer/index');
+let removeESModuleReg = /"use strict";\s*Object\.defineProperty\(exports,\s*"__esModule",\s*\{\s*value:\s*true\s*\}\);?/g;
 
+let exportsReg = /\bexports\.default\s*=/g;
+let removeMiddleDefault = /(_\d+)\.default/g;
+let cleanCode = code => {
+    return code.replace(removeESModuleReg, '').replace(exportsReg, 'module.exports=').replace(removeMiddleDefault, '$1');
+};
 combineTool.config({
     debug: true,
     commonFolder: tmplFolder,
@@ -37,6 +43,7 @@ combineTool.config({
             }
         });
         str = str.outputText;
+        str = cleanCode(str);
         return str;
     },
     // compileJSEnd(content) {
@@ -93,6 +100,7 @@ gulp.task('lang-check', async () => {
             !f.includes('/i18n/')) {
             let c = combineTool.readFile(f);
             c.replace(langReg, m => {
+                //console.log(f,m,lMap.hasOwnProperty(m));
                 if (lMap.hasOwnProperty(m)) {
                     lMap[m]++;
                 } else {
@@ -216,6 +224,7 @@ gulp.task('dist', gulp.series('cleanSrc', () => {
             './src/util/**',
             './src/panels/**',
             './src/elements/**',
+            '!./src/elements/**/printer.js',
             './src/designer/**'])
             .pipe(concat('iot.js'))
             .pipe(terser({

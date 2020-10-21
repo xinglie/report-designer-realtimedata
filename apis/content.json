@@ -1,0 +1,299 @@
+{
+    "data": {
+        "page": {
+            "width": 791,
+            "height": 1120,
+            "background": "#ffffff",
+            "backgroundImage": "",
+            "backgroundRepeat": "full",
+            "backgroundWidth": 0,
+            "backgroundHeight": 0,
+            "positionXOffset": 0,
+            "positionYOffset": 0
+        },
+        "groups": [],
+        "elements": [
+            {
+                "id": "e_125",
+                "type": "hod-table",
+                "props": {
+                    "rows": [
+                        {
+                            "cols": [
+                                {
+                                    "height": 68,
+                                    "width": 502,
+                                    "rowspan": 1,
+                                    "colspan": 2,
+                                    "elements": [
+                                        {
+                                            "id": "e_140",
+                                            "type": "text",
+                                            "props": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 200,
+                                                "height": 25,
+                                                "alpha": 1,
+                                                "text": "人物信息绑定测试",
+                                                "bind": {
+                                                    "url": "",
+                                                    "id": "",
+                                                    "fields": []
+                                                },
+                                                "fontsize": 18,
+                                                "fontfamily": "Microsoft YaHei",
+                                                "letterspacing": 0,
+                                                "background": "",
+                                                "forecolor": "#000000",
+                                                "styleBold": true,
+                                                "styleUnderline": false,
+                                                "styleItalic": false,
+                                                "styleStrike": false,
+                                                "hpos": "center",
+                                                "vpos": "center",
+                                                "fillX": true,
+                                                "fillY": true,
+                                                "ename": "文本"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "cols": [
+                                {
+                                    "height": 71.33333333333333,
+                                    "width": 302,
+                                    "elements": [
+                                        {
+                                            "id": "e_204",
+                                            "type": "text",
+                                            "props": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 200,
+                                                "height": 25,
+                                                "alpha": 1,
+                                                "text": "",
+                                                "bind": {
+                                                    "url": "apis/person.json",
+                                                    "id": "3",
+                                                    "fields": [
+                                                        {
+                                                            "name": "姓名",
+                                                            "id": "name"
+                                                        }
+                                                    ]
+                                                },
+                                                "fontsize": 14,
+                                                "fontfamily": "Microsoft YaHei",
+                                                "letterspacing": 0,
+                                                "background": "",
+                                                "forecolor": "#000000",
+                                                "styleBold": false,
+                                                "styleUnderline": false,
+                                                "styleItalic": false,
+                                                "styleStrike": false,
+                                                "hpos": "center",
+                                                "vpos": "center",
+                                                "fillX": true,
+                                                "fillY": true,
+                                                "ename": "文本"
+                                            }
+                                        }
+                                    ],
+                                    "rowspan": 1,
+                                    "colspan": 1
+                                },
+                                {
+                                    "height": 214,
+                                    "width": 200,
+                                    "elements": [
+                                        {
+                                            "id": "e_184",
+                                            "type": "image",
+                                            "props": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 200,
+                                                "height": 100,
+                                                "alpha": 1,
+                                                "image": "",
+                                                "bind": {
+                                                    "url": "apis/person.json",
+                                                    "id": "3",
+                                                    "fields": [
+                                                        {
+                                                            "name": "头像",
+                                                            "id": "avatar"
+                                                        }
+                                                    ]
+                                                },
+                                                "rotateX": false,
+                                                "rotateY": false,
+                                                "fillX": true,
+                                                "fillY": true,
+                                                "ename": "图片"
+                                            }
+                                        }
+                                    ],
+                                    "rowspan": 3,
+                                    "colspan": 1
+                                }
+                            ]
+                        },
+                        {
+                            "cols": [
+                                {
+                                    "width": 302,
+                                    "height": 71.33333333333333,
+                                    "rowspan": 1,
+                                    "colspan": 1,
+                                    "elements": [
+                                        {
+                                            "id": "e_219",
+                                            "type": "text",
+                                            "props": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 200,
+                                                "height": 25,
+                                                "alpha": 1,
+                                                "text": "",
+                                                "bind": {
+                                                    "url": "apis/person.json",
+                                                    "id": "3",
+                                                    "fields": [
+                                                        {
+                                                            "name": "性别",
+                                                            "id": "gender"
+                                                        }
+                                                    ]
+                                                },
+                                                "fontsize": 14,
+                                                "fontfamily": "Microsoft YaHei",
+                                                "letterspacing": 0,
+                                                "background": "",
+                                                "forecolor": "#000000",
+                                                "styleBold": false,
+                                                "styleUnderline": false,
+                                                "styleItalic": false,
+                                                "styleStrike": false,
+                                                "hpos": "center",
+                                                "vpos": "center",
+                                                "fillX": true,
+                                                "fillY": true,
+                                                "ename": "文本"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "cols": [
+                                {
+                                    "width": 302,
+                                    "height": 71.33333333333333,
+                                    "rowspan": 1,
+                                    "colspan": 1,
+                                    "elements": [
+                                        {
+                                            "id": "e_226",
+                                            "type": "barcode",
+                                            "props": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 200,
+                                                "height": 80,
+                                                "alpha": 1,
+                                                "text": "",
+                                                "bind": {
+                                                    "url": "apis/person.json",
+                                                    "id": "3",
+                                                    "fields": [
+                                                        {
+                                                            "name": "身份证号",
+                                                            "id": "idn"
+                                                        }
+                                                    ]
+                                                },
+                                                "format": "code128",
+                                                "showText": true,
+                                                "color": "#000000",
+                                                "linewidth": 2,
+                                                "fillX": true,
+                                                "fillY": true,
+                                                "ename": "条形码"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "cols": [
+                                {
+                                    "width": 502,
+                                    "height": 40,
+                                    "rowspan": 1,
+                                    "colspan": 2,
+                                    "elements": [
+                                        {
+                                            "id": "e_252",
+                                            "type": "text",
+                                            "props": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 200,
+                                                "height": 25,
+                                                "alpha": 1,
+                                                "text": "",
+                                                "bind": {
+                                                    "url": "apis/person.json",
+                                                    "id": "3",
+                                                    "fields": [
+                                                        {
+                                                            "name": "地址",
+                                                            "id": "addr"
+                                                        }
+                                                    ]
+                                                },
+                                                "fontsize": 14,
+                                                "fontfamily": "Microsoft YaHei",
+                                                "letterspacing": 0,
+                                                "background": "",
+                                                "forecolor": "#000000",
+                                                "styleBold": false,
+                                                "styleUnderline": false,
+                                                "styleItalic": false,
+                                                "styleStrike": false,
+                                                "hpos": "flex-start",
+                                                "vpos": "center",
+                                                "fillX": true,
+                                                "fillY": true,
+                                                "ename": "文本"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "x": 112,
+                    "y": 93,
+                    "width": 503,
+                    "height": 322,
+                    "alpha": 1,
+                    "borderwidth": 1,
+                    "bordertype": "solid",
+                    "bordercolor": "#000000",
+                    "ename": "表格容器"
+                }
+            }
+        ]
+    },
+    "status": 1
+}
