@@ -10,13 +10,17 @@
     </head>
     <body>
         <div id="app" class="app"><div class="outer"><div class="inner"></div></div></div>
-        <script id="boot" type="text/javascript" src="dist/iot.js?v=202010220756"></script>
+        <script id="boot" type="text/javascript" src="dist/iot.js?v=202010281025"></script>
         <script>
         designer({
+            version:'202010281025',
             getImageUrl:'./apis/images.json',
             getFieldUrl:'./apis/fields.json',
             getTemplateUrl:'./apis/example.json',
-            helpUrl:'//github.com/xinglie/report-designer/issues'
+            //saveContentUrl:'./apis/content.json',
+            helpUrl:'//github.com/xinglie/report-designer/issues',
+            helpElement:true,
+            pb:true
         });
         </script>
     </body>

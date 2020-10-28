@@ -221,13 +221,12 @@ gulp.task('dist', gulp.series('cleanSrc', () => {
     (time.getHours() + '').padStart(2, '0'),
     (time.getMinutes() + '').padStart(2, '0')].join('');
     let content = fs.readFileSync('./index.html').toString();
-    content = content.replace(/src="dist\/iot.js(\?v=\d+)?"/, `src="dist/iot.js?v=${stamp}"`);
+    content = content.replace(/src="dist\/iot.js(\?v=\d+)?"/, `src="dist/iot.js?v=${stamp}"`).replace(/\bdesigner\(\{(?:\s*version:'\d+',\s*)?/g,`designer({\n            version:'${stamp}',\n            `);
     fs.writeFileSync('./index.html', content);
 
     content = fs.readFileSync('./print.html').toString();
-    content = content.replace(/src="dist\/printer.js(\?v=\d+)?"/, `src="dist/printer.js?v=${stamp}"`);
+    content = content.replace(/src="dist\/printer.js(\?v=\d+)?"/, `src="dist/printer.js?v=${stamp}"`).replace(/designer\(\{(?:\s*version:'\d+'(,)?(\s*))?/g,`designer({\n            version:'${stamp}'$1$2`);
     fs.writeFileSync('./print.html', content);
-
     return del('./dist').then(() => {
         return combineTool.combine();
     }).then(() => {
